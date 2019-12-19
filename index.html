@@ -37,7 +37,11 @@
     })(document, window.mixpanel || []);
     mixpanel.init("61bb7aa193ffeb0e41b4e11073c2e202");</script>
   <!-- end Mixpanel -->
-
+  <script type="text/javascript">
+    $("#logo_button").click(function () {
+      mixpanel.track("Go to cyselectronics Web");
+    });
+  </script>
 </head>
 
 <body class="is-preload">
@@ -166,11 +170,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <script type="text/javascript">
-    $("#logo_button").click(function () {
-      mixpanel.track("Go to cyselectronics Web");
-    });
-  </script>
+
 </body>
 
 </html>
