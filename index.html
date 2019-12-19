@@ -38,17 +38,17 @@
     mixpanel.init("61bb7aa193ffeb0e41b4e11073c2e202");</script>
   <!-- end Mixpanel -->
   <script type="text/javascript">
-    $("#logo_button").click(function () {
-      mixpanel.track("Go to cyselectronics Web");
+    mixpanel.track_links("#mainImage a", "click cys logo", {
+      "referrer": document.referrer
     });
   </script>
 </head>
 
 <body class="is-preload">
   <!-- Header -->
-  <div id="header">
+  <div id="mainImage">
     <a href="http://cyselectronics.com/">
-      <img src="images/logo-cys.png" alt="cys C&S controles y sistemas" onclick="logo_button()" />
+      <img src="images/logo-cys.png" alt="cys C&S controles y sistemas" />
     </a>
 
     <h1>This is MAGNAPOSI SM-500T.</h1>
