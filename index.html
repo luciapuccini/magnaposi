@@ -37,10 +37,14 @@
     })(document, window.mixpanel || []);
     mixpanel.init("61bb7aa193ffeb0e41b4e11073c2e202");</script>
   <!-- end Mixpanel -->
+
   <script type="text/javascript">
     mixpanel.track_links("#header a", "click nav link", {
       "referrer": document.referrer
     });
+  </script>
+  <script type="text/javascript">
+    mixpanel.identify('lucia')
   </script>
 </head>
 
