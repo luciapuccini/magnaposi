@@ -39,13 +39,24 @@
   <!-- end Mixpanel -->
 
   <script type="text/javascript">
-    mixpanel.track_links("#header a", "click nav link", {
+    mixpanel.track_links("#header a", "click CYS LOGO", {
       "referrer": document.referrer
     });
   </script>
-  <script type="text/javascript">
-    mixpanel.identify('lucia')
+
+  <script>
+    function setUser() {
+      console.log('registra', document.getElementById('userName'))
+      mixpanel.people.set({
+        "$email": document.getElementById('email'),    // only special properties need the $
+        "name": document.getElementById('userName'),
+        "$created": new Date(),
+      });
+      mixpanel.identify(document.getElementById('userName'));
+
+    }
   </script>
+
 </head>
 
 <body class="is-preload">
@@ -122,30 +133,32 @@
         <h2>Contact us</h2>
       </header>
       <p><strong>Email: </strong> info@controlesysistemas.com.ar</p>
-      <!--
-        <form method="post" action="#">
-          <div class="row">
-            <div class="col-6 col-12-mobilep">
-              <input type="text" name="name" placeholder="Name" />
-            </div>
-            <div class="col-6 col-12-mobilep">
-              <input type="email" name="email" placeholder="Email" />
-            </div>
-            <div class="col-12">
-              <textarea
-                name="message"
-                placeholder="Message"
-                rows="6"
-              ></textarea>
-            </div>
-            <div class="col-12">
-              <ul class="actions special">
-                <li><input type="submit" value="Send Message" /></li>
-              </ul>
-            </div>
+      <header class="major last">
+        <h2>I want to know more!</h2>
+      </header>
+      <form name="contact" netlify>
+
+        <div class="row">
+          <div class="col-6 col-12-mobilep">
+            <input id='userName' type="text" name="name" placeholder="Name" />
           </div>
-        </form>
--->
+          <div class="col-6 col-12-mobilep">
+            <input id='email' type="email" name="email" placeholder="Email" />
+          </div>
+
+          <div class="col-12">
+            <ul class="actions special">
+              <li><input type="submit" value="Send me the brochure!" onclick="setUser()" /></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+
+
+
+
+
+
       <ul class="icons">
         <li>
           <a href="#" class="icon far fa-envelope-open"><span class="label">Facebook</span></a>
