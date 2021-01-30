@@ -1,193 +1,316 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="C&S electronics magnaposi sensor" />
+    <meta
+      name="keywords"
+      content="C&S, controles y sistemas, inductive magnetic sensor, magnaposi, sensor, positioning"
+    />
+    <meta name="author" content="Lucia Puccini" />
+    <meta
+      name="google-site-verification"
+      content="QwV-XN8-Za7pXLT6RMFivL5sUNb6kZs0fE1Z_LxTm9o"
+    />
+    <title>Magnaposi</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="C&S electronics magnaposi sensor" />
-  <meta name="keywords"
-    content="C&S, controles y sistemas, inductive magnetic sensor, magnaposi, sensor, positioning" />
-  <meta name="author" content="Lucia Puccini" />
-  <meta name="google-site-verification" content="QwV-XN8-Za7pXLT6RMFivL5sUNb6kZs0fE1Z_LxTm9o" />
-  <title>Magnaposi</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <title>C&S controles y sistemas electronics</title>
 
-  <title>C&S controles y sistemas electronics</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-  <link rel="stylesheet" href="assets/css/main.css" />
-
-  <!-- start Mixpanel -->
-  <script type="text/javascript">(function (c, a) {
-      if (!a.__SV) {
-        var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
-          function c(b, i) {
-            var a = i.split("."); 2 == a.length && (b = b[a[0]], i = a[1]); b[i] = function () {
-              b.push([i].concat(Array.prototype.slice.call(arguments,
-                0)))
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+      (function (c, a) {
+        if (!a.__SV) {
+          var b = window;
+          try {
+            var d,
+              m,
+              j,
+              k = b.location,
+              f = k.hash;
+            d = function (a, b) {
+              return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null;
+            };
+            f &&
+              d(f, "state") &&
+              ((j = JSON.parse(decodeURIComponent(d(f, "state")))),
+              "mpeditor" === j.action &&
+                (b.sessionStorage.setItem("_mpcehash", f),
+                history.replaceState(
+                  j.desiredHash || "",
+                  c.title,
+                  k.pathname + k.search
+                )));
+          } catch (n) {}
+          var l, h;
+          window.mixpanel = a;
+          a._i = [];
+          a.init = function (b, d, g) {
+            function c(b, i) {
+              var a = i.split(".");
+              2 == a.length && ((b = b[a[0]]), (i = a[1]));
+              b[i] = function () {
+                b.push([i].concat(Array.prototype.slice.call(arguments, 0)));
+              };
             }
-          } var e = a; "undefined" !== typeof g ? e = a[g] = [] : g = "mixpanel"; e.people = e.people || []; e.toString = function (b) { var a = "mixpanel"; "mixpanel" !== g && (a += "." + g); b || (a += " (stub)"); return a }; e.people.toString = function () { return e.toString(1) + ".people (stub)" }; l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-          for (h = 0; h < l.length; h++)c(e, l[h]); var f = "set set_once union unset remove delete".split(" "); e.get_group = function () { function a(c) { b[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); e.push([d, call2]) } } for (var b = {}, d = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < f.length; c++)a(f[c]); return b }; a._i.push([b, d, g])
-        }; a.__SV = 1.2; b = c.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
-          MIXPANEL_CUSTOM_LIB_URL : "file:" === c.location.protocol && "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"; d = c.getElementsByTagName("script")[0]; d.parentNode.insertBefore(b, d)
-      }
-    })(document, window.mixpanel || []);
-    mixpanel.init("61bb7aa193ffeb0e41b4e11073c2e202");</script>
-  <!-- end Mixpanel -->
+            var e = a;
+            "undefined" !== typeof g ? (e = a[g] = []) : (g = "mixpanel");
+            e.people = e.people || [];
+            e.toString = function (b) {
+              var a = "mixpanel";
+              "mixpanel" !== g && (a += "." + g);
+              b || (a += " (stub)");
+              return a;
+            };
+            e.people.toString = function () {
+              return e.toString(1) + ".people (stub)";
+            };
+            l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
+              " "
+            );
+            for (h = 0; h < l.length; h++) c(e, l[h]);
+            var f = "set set_once union unset remove delete".split(" ");
+            e.get_group = function () {
+              function a(c) {
+                b[c] = function () {
+                  call2_args = arguments;
+                  call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+                  e.push([d, call2]);
+                };
+              }
+              for (
+                var b = {},
+                  d = ["get_group"].concat(
+                    Array.prototype.slice.call(arguments, 0)
+                  ),
+                  c = 0;
+                c < f.length;
+                c++
+              )
+                a(f[c]);
+              return b;
+            };
+            a._i.push([b, d, g]);
+          };
+          a.__SV = 1.2;
+          b = c.createElement("script");
+          b.type = "text/javascript";
+          b.async = !0;
+          b.src =
+            "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+              ? MIXPANEL_CUSTOM_LIB_URL
+              : "file:" === c.location.protocol &&
+                "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+              ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"
+              : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";
+          d = c.getElementsByTagName("script")[0];
+          d.parentNode.insertBefore(b, d);
+        }
+      })(document, window.mixpanel || []);
+      mixpanel.init("61bb7aa193ffeb0e41b4e11073c2e202");
+    </script>
+    <!-- end Mixpanel -->
 
-  <script type="text/javascript">
-    mixpanel.track_links("#header a", "click CYS LOGO", {
-      "referrer": document.referrer
-    });
-  </script>
-
-  <script>
-    function setUser() {
-      console.log('registra', document.getElementById('userName'))
-      mixpanel.people.set({
-        "$email": document.getElementById('email'),    // only special properties need the $
-        "name": document.getElementById('userName'),
-        "$created": new Date(),
+    <script type="text/javascript">
+      mixpanel.track_links("#header a", "click CYS LOGO", {
+        referrer: document.referrer,
       });
-      mixpanel.identify(document.getElementById('userName'));
+    </script>
 
-    }
-  </script>
+    <script>
+      function setUser() {
+        console.log("registra", document.getElementById("userName"));
+        mixpanel.people.set({
+          $email: document.getElementById("email"), // only special properties need the $
+          name: document.getElementById("userName"),
+          $created: new Date(),
+        });
+        mixpanel.identify(document.getElementById("userName"));
+      }
+    </script>
+  </head>
 
-</head>
+  <body class="is-preload">
+    <!-- Header -->
+    <div id="header">
+      <a href="http://cyselectronics.com/">
+        <img
+          src="images/logo-cys.png"
+          alt="cys C&S controles y sistemas"
+          onclick="logo_button()"
+        />
+      </a>
 
-<body class="is-preload">
-  <!-- Header -->
-  <div id="header">
-    <a href="http://cyselectronics.com/">
-      <img src="images/logo-cys.png" alt="cys C&S controles y sistemas" onclick="logo_button()" />
-    </a>
-
-    <h1>This is MAGNAPOSI SM-500T.</h1>
-    <h2>
-      A product by
-      <a href="http://cyselectronics.com/">C&S controles y sistemas SRL</a>
-    </h2>
-  </div>
-  <!-- Main -->
-  <div id="main">
-    <header class="major container medium">
+      <h1>This is MAGNAPOSI SM-500T.</h1>
       <h2>
-        Steel catenary measurement in pickling processes.
+        A product by
+        <a href="http://cyselectronics.com/">C&S controles y sistemas SRL</a>
       </h2>
-      <!--
+    </div>
+    <!-- Main -->
+    <div id="main">
+      <header class="major container medium">
+        <h2>Steel catenary measurement in pickling processes.</h2>
+        <!--
 					<p>Tellus erat mauris ipsum fermentum<br />
 					etiam vivamus nunc nibh morbi.</p>
 					-->
-    </header>s
+      </header>
+      s
 
-    <div class="box alt container">
-      <section class="feature left">
-        <a href="#" class="image"><img src="images/tank01.png" alt="acid tank in pickling line" /></a>
-        <div class="content">
-          <h3>
-            In pickling processes is important to control the depth to which
-            the material is immersed
-          </h3>
-        </div>
-      </section>
-      <section class="feature right">
-        <a href="#" class="image"><img src="images/tank3.png" alt="acid tank in pickling line" /></a>
-        <div class="content">
-          <h3>To achieve that a reliable measurement must be done.</h3>
-        </div>
-      </section>
-      <section class="feature left">
-        <a href="#" class="image"><img src="images/tank2.png" alt="acid tank in pickling line" /></a>
-        <div class="content">
-          <h3>
-            The MAGNAPOSI System performs this function without contact with
-            the acid solution and is maintenance free.
-          </h3>
-        </div>
-      </section>
+      <div class="box alt container">
+        <section class="feature left">
+          <a href="#" class="image"
+            ><img src="images/tank01.png" alt="acid tank in pickling line"
+          /></a>
+          <div class="content">
+            <h3>
+              In pickling processes is important to control the depth to which
+              the material is immersed
+            </h3>
+          </div>
+        </section>
+        <section class="feature right">
+          <a href="#" class="image"
+            ><img src="images/tank3.png" alt="acid tank in pickling line"
+          /></a>
+          <div class="content">
+            <h3>To achieve that a reliable measurement must be done.</h3>
+          </div>
+        </section>
+        <section class="feature left">
+          <a href="#" class="image"
+            ><img src="images/tank2.png" alt="acid tank in pickling line"
+          /></a>
+          <div class="content">
+            <h3>
+              The MAGNAPOSI System performs this function without contact with
+              the acid solution and is maintenance free.
+            </h3>
+          </div>
+          <div class="major last">
+            <div
+              style="
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-end;
+              "
+            >
+              <h2 style="margin-top: 50px; color: #4eb980">
+                Download the Brochure
+              </h2>
+              <a
+                class=""
+                href="./assets/Magnaposi_datasheet_3.02.pdf"
+                download="Magnaposi_Datasheet"
+              >
+                <img
+                  height="20px"
+                  width="20px"
+                  src="images/down-arrow.png"
+                  alt="download brochure"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <br />
+      <footer class="major container medium">
+        <h3>Get to Know us</h3>
+        <p>
+          Our expertise providing service to the steelmaking industry allows us
+          to make top state of the art sensing solutions, automatic control,
+          real time quality control, equipment protection, among others.
+        </p>
+        <ul class="actions special">
+          <li>
+            <a href="http://cyselectronics.com/contact-us" class="button"
+              >Work With Us</a
+            >
+          </li>
+        </ul>
+      </footer>
     </div>
 
-    <footer class="major container medium">
-      <h3>Get to Know us</h3>
-      <p>
-        Our expertise providing service to the steelmaking industry allows us
-        to make top state of the art sensing solutions, automatic control,
-        real time quality control, equipment protection, among others.
-      </p>
-      <ul class="actions special">
-        <li>
-          <a href="http://cyselectronics.com/contact-us" class="button">Work With Us</a>
-        </li>
-      </ul>
-    </footer>
-  </div>
+    <!-- Footer -->
+    <div id="footer">
+      <div class="container medium">
+        <header class="major last">
+          <h2>Contact us</h2>
+        </header>
+        <p><strong>Email: </strong> info@controlesysistemas.com.ar</p>
+        <header class="major last">
+          <h2>I want to know more!</h2>
+        </header>
+        <form name="contact" netlify>
+          <div class="row">
+            <div class="col-6 col-12-mobilep">
+              <input id="userName" type="text" name="name" placeholder="Name" />
+            </div>
+            <div class="col-6 col-12-mobilep">
+              <input id="email" type="email" name="email" placeholder="Email" />
+            </div>
 
-  <!-- Footer -->
-  <div id="footer">
-    <div class="container medium">
-      <header class="major last">
-        <h2>Contact us</h2>
-      </header>
-      <p><strong>Email: </strong> info@controlesysistemas.com.ar</p>
-      <header class="major last">
-        <h2>I want to know more!</h2>
-      </header>
-      <form name="contact" netlify>
-
-        <div class="row">
-          <div class="col-6 col-12-mobilep">
-            <input id='userName' type="text" name="name" placeholder="Name" />
+            <div class="col-12">
+              <ul class="actions special">
+                <li>
+                  <input
+                    type="submit"
+                    value="Contact me!"
+                    onclick="setUser()"
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-12-mobilep">
-            <input id='email' type="email" name="email" placeholder="Email" />
-          </div>
+        </form>
 
-          <div class="col-12">
-            <ul class="actions special">
-              <li><input type="submit" value="Contact me!" onclick="setUser()" /></li>
-            </ul>
-          </div>
-        </div>
-      </form>
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon far fa-envelope-open"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/ControlesySistemasArgentina/"
+              class="icon fa-facebook"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/cyscontrolesysistemas/"
+              class="icon fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+        </ul>
 
-
-
-
-
-
-      <ul class="icons">
-        <li>
-          <a href="#" class="icon far fa-envelope-open"><span class="label">Facebook</span></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/ControlesySistemasArgentina/" class="icon fa-facebook"><span
-              class="label">Facebook</span></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/cyscontrolesysistemas/" class="icon fa-instagram"><span
-              class="label">Instagram</span></a>
-        </li>
-      </ul>
-
-      <ul class="copyright">
-        <li>&copy; C&S controles y sistemas SRL. All rights reserved.</li>
-        <li>Design: <a href="https://luciapuccini.com">Lucia Puccini</a></li>
-      </ul>
+        <ul class="copyright">
+          <li>&copy; C&S controles y sistemas SRL. All rights reserved.</li>
+          <li>Design: <a href="https://luciapuccini.com">Lucia Puccini</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
-
-</body>
-
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
