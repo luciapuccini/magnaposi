@@ -22,6 +22,7 @@
 
 
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- start Mixpanel -->
   <script type="text/javascript">
@@ -146,7 +147,7 @@
          }
         }
     </script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </head>
 
@@ -235,8 +236,8 @@
       <header class="major last">
         <h2>I want to know more!</h2>
       </header>
-      <form id="contact-form" name="contact" netlify action="?" method="POST">
-        <div class="g-recaptcha" data-sitekey="6LdR2zwlAAAAAOGAhMaJGT9cpIl0dw_1XnnWLqjh"></div>
+      <form data-netlify-recaptcha="true" data-netlify="true" name="contact" netlify>
+
 
         <div class="row">
           <div class="col-6 col-12-mobilep">
@@ -254,6 +255,8 @@
             </ul>
           </div>
         </div>
+        <div data-netlify-recaptcha="true"></div>
+
       </form>
 
       <ul class="icons">
