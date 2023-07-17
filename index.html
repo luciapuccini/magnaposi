@@ -234,7 +234,7 @@
                 justify-content: flex-end;
               "
             >
-              <button id="downloadBtn">
+              <button onclick="openPDF()">
                 <h2>Download the Brochure</h2>
               </button>
             </div>
@@ -329,25 +329,16 @@
 
     <!-- Scripts -->
     <script>
-      const downloadPDF = () => {
-        fetch("../../public/Magnaposi_eng_datasheet_3.02.pdf")
-          .then((response) => response.blob())
-          .then((blob) => {
-            const url = window.URL.createObjectURL(new Blob([blob]));
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", "Magnaposi_Datasheet.pdf");
-            document.body.appendChild(link);
-            link.click();
-            link.parentNode.removeChild(link);
-          })
-          .catch((error) => {
-            console.error("Error downloading PDF:", error);
-          });
+      function openPDF() {
+        window.open(
+          "./assets/Magnaposi_Eng_Datashet_3.02.pdf",
+          "_blank",
+          "width=800,height=1000"
+        );
+      }
+      window.onload = function () {
+        openPDF();
       };
-
-      const downloadBtn = document.getElementById("downloadBtn");
-      downloadBtn.addEventListener("click", downloadPDF);
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
