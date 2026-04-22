@@ -59,7 +59,6 @@ function initContactForm(): void {
 }
 
 function initializeApp(): void {
-  openPDF();
   initBreakpoints();
   initAnimations();
   initLogoTracking();
