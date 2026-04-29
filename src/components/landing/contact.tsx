@@ -86,6 +86,16 @@ export function Contact({ dict }: { dict: Dict }) {
                   />
                 </label>
               </div>
+              <label className="flex flex-col gap-1.5">
+                <span className="sr-only">{dict.contact.form.messagePlaceholder}</span>
+                <textarea
+                  name="message"
+                  required
+                  rows={5}
+                  placeholder={dict.contact.form.messagePlaceholder}
+                  className="rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40 resize-none"
+                />
+              </label>
               <div data-netlify-recaptcha="true" />
               <button
                 type="submit"

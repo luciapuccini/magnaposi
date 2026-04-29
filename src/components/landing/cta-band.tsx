@@ -1,11 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import type { Dict } from "@/i18n";
 import { CONTACT_EMAIL } from "@/i18n";
-import { buildMailto } from "@/mailto";
 
 export function CtaBand({ dict }: { dict: Dict }) {
-  const quote = buildMailto(dict.contact.quoteSubject, dict.contact.quoteBody);
-
   return (
     <section className="border-b border-border/60 bg-primary text-primary-foreground">
       <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center md:justify-between md:py-16">
@@ -19,7 +16,7 @@ export function CtaBand({ dict }: { dict: Dict }) {
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
-            href={quote}
+            href="#contact"
             className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
           >
             {dict.ctaBand.primary}

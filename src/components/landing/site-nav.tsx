@@ -1,10 +1,7 @@
 import type { Dict } from "@/i18n";
 import { CYS_URL } from "@/i18n";
-import { buildMailto } from "@/mailto";
 
 export function SiteNav({ dict }: { dict: Dict }) {
-  const quote = buildMailto(dict.contact.quoteSubject, dict.contact.quoteBody);
-
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -61,7 +58,7 @@ export function SiteNav({ dict }: { dict: Dict }) {
             {dict.langSwitchLabel}
           </a>
           <a
-            href={quote}
+            href="#contact"
             className="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {dict.nav.cta}
