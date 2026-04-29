@@ -46,6 +46,9 @@ export function SiteNav({ dict }: { dict: Dict }) {
           <a href="#faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             {dict.nav.faq}
           </a>
+          <a href="#contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            {dict.nav.contact}
+          </a>
         </nav>
 
         <div className="flex items-center gap-2">
