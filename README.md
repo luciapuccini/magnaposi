@@ -8,7 +8,7 @@ Marketing site for the **MAGNAPOSI SM-500T**, a contactless magnetic position se
 
 - i18n (EN / ES) with a separate Vite entry point per locale
 - Contact form with spam protection via Netlify Forms + reCAPTCHA
-- SPA Static build
+- SPA, no backend
 
 ## Stack
 

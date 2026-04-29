@@ -153,11 +153,7 @@ export const dictionaries: Record<Locale, Dict> = {
 					title: "Contactless",
 					body: "The sensor never touches the acid. No corrosion path, no fouling.",
 				},
-				{
-					title: "Maintenance-free",
-					body: "No moving parts, no seals to replace. Install it and forget it.",
-				},
-				{
+					{
 					title: "Acid-immune housing",
 					body: "Industrial enclosure rated for pickling line atmospheres.",
 				},
@@ -317,11 +313,7 @@ export const dictionaries: Record<Locale, Dict> = {
 					title: "Sin contacto",
 					body: "El sensor nunca toca el ácido. Sin corrosión, sin suciedad acumulada.",
 				},
-				{
-					title: "Sin mantenimiento",
-					body: "Sin partes móviles ni sellos que reemplazar. Instalá y olvidate.",
-				},
-				{
+					{
 					title: "Gabinete inmune al ácido",
 					body: "Carcasa industrial apta para atmósferas de líneas de decapado.",
 				},
