@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Dict } from "@/i18n";
 
 export function Hero({ dict }: { dict: Dict }) {
