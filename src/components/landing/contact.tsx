@@ -51,7 +51,6 @@ export function Contact({ dict }: { dict: Dict }) {
               name="contact"
               method="POST"
               data-netlify="true"
-              data-netlify-recaptcha="true"
               data-netlify-honeypot="bot-field"
               className="mt-5 grid gap-4"
             >
@@ -96,7 +95,6 @@ export function Contact({ dict }: { dict: Dict }) {
                   className="rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40 resize-none"
                 />
               </label>
-              <div data-netlify-recaptcha="true" />
               <button
                 type="submit"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-sm ring-1 ring-primary/20 transition-colors hover:bg-primary/90 sm:self-start"
