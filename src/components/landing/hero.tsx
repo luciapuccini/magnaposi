@@ -45,7 +45,7 @@ export function Hero({ dict }: { dict: Dict }) {
 				<div className="md:col-span-6">
 					<div className="relative aspect-3/2 overflow-hidden rounded-xl border border-border bg-card shadow-sm">
 						<img
-							src="/tank2.png"
+							src="/tank2.webp"
 							alt={dict.hero.imageAlt}
 							width={428}
 							height={289}

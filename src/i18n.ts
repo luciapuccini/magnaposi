@@ -32,6 +32,11 @@ export interface Dict {
 		body: string;
 		bullets: readonly string[];
 	};
+	videoShowcase: {
+		kicker: string;
+		title: string;
+		subtitle: string;
+	};
 	how: {
 		kicker: string;
 		title: string;
@@ -115,11 +120,17 @@ export const dictionaries: Record<Locale, Dict> = {
 
 			imageAlt: "MAGNAPOSI SM-500T installed above an acid pickling tank",
 		},
+		videoShowcase: {
+			kicker: "See it in action",
+			title: "Watch the SM-500T at work.",
+			subtitle:
+				"Simulated footage showing the sensor solving pickling-depth control in a live steel line.",
+		},
 		problem: {
 			kicker: "The problem",
 			title:
 				"Pickling depth control is hard — and getting it wrong is expensive.",
-			body: "In steel pickling, the coil must be immersed to a precise depth. Contact sensors corrode, floats get stuck, and over-etching scraps product. You need a measurement that doesn't touch the acid and doesn't fail.",
+			body: "In steel pickling, the steel strip must be immersed to a precise depth. Contact sensors corrode, ultrasound sensor are affected by turbulence, and over-etching scraps product. You need a measurement that doesn't touch the acid and doesn't fail.",
 			bullets: [
 				"Corrosive pickling environments demand sensors built to survive them.",
 			],
@@ -153,7 +164,7 @@ export const dictionaries: Record<Locale, Dict> = {
 					title: "Contactless",
 					body: "The sensor never touches the acid. No corrosion path, no fouling.",
 				},
-					{
+				{
 					title: "Acid-immune housing",
 					body: "Industrial enclosure rated for pickling line atmospheres.",
 				},
@@ -277,6 +288,12 @@ export const dictionaries: Record<Locale, Dict> = {
 			secondaryCta: "Cómo funciona",
 			imageAlt: "MAGNAPOSI SM-500T instalado sobre un tanque de decapado",
 		},
+		videoShowcase: {
+			kicker: "Véalo en acción",
+			title: "El SM-500T trabajando en planta.",
+			subtitle:
+				"Simulación de instalación donde el sensor resuelve el control de profundidad de decapado en una línea de acero en operación.",
+		},
 		problem: {
 			kicker: "El problema",
 			title:
@@ -313,7 +330,7 @@ export const dictionaries: Record<Locale, Dict> = {
 					title: "Sin contacto",
 					body: "El sensor nunca toca el ácido. Sin corrosión, sin suciedad acumulada.",
 				},
-					{
+				{
 					title: "Gabinete inmune al ácido",
 					body: "Carcasa industrial apta para atmósferas de líneas de decapado.",
 				},

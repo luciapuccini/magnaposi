@@ -2,6 +2,7 @@ import type { Dict } from "@/i18n";
 import { SiteNav } from "./site-nav";
 import { Hero } from "./hero";
 import { Problem } from "./problem";
+import { VideoShowcase } from "./video-showcase";
 import { HowItWorks } from "./how-it-works";
 import { Benefits } from "./benefits";
 import { Specs } from "./specs";
@@ -19,6 +20,7 @@ export function LandingPage({ dict }: { dict: Dict }) {
       <main className="flex-1">
         <Hero dict={dict} />
         <Problem dict={dict} />
+        <VideoShowcase dict={dict} />
         <HowItWorks dict={dict} />
         <Benefits dict={dict} />
         <Specs dict={dict} />
